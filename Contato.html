@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Ativo Sports | Contato</title>
+</head>
+
+<body>
+  <header>
+    <h1>Ativo Sports</h1>
+    <img src="img/fotoloja.jpg" alt="Banner da Ativo Sports"
+      style="width: 100%; max-width:800px; display: block; margin: 0 auto;">
+    <p>Artigos esportivos para você no Rio de Janeiro!</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="Produto.html">Produtos</a>
+    <a href="Novidades.html">Novidades</a>
+    <a href="Contato.html">Contato</a>
+  </nav>
+
+  <main class="intro">
+    <h2 class="titulo">Formulário de Contato</h2>
+    <form class="formulario" onsubmit="event.preventDefault(); enviarEmail();">
+      <label for="nome">Nome:</label><br>
+      <input type="text" id="nome" name="nome" required><br><br>
+
+      <label for="email">E-mail:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="mensagem">Mensagem:</label><br>
+      <textarea id="mensagem" name="mensagem" required></textarea><br><br>
+
+      <input type="submit" value="Enviar">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ativo Sports.</p>
+  </footer>
+
+  <script>
+    function enviarEmail() {
+      var nome = document.getElementById("nome").value;
+      var email = document.getElementById("email").value;
+      var mensagem = document.getElementById("mensagem").value;
+
+      if (nome && email && mensagem) {
+        alert("Mensagem enviada com sucesso!");
+      } else {
+        alert("Por favor, preencha todos os campos.");
+      }
+    }
+  </script>
+</body>
+
+</html>
